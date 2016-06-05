@@ -31,7 +31,8 @@ RUN set -x \
 RUN cd /opt \
 && wget https://github.com/sirensolutions/kibi/releases/download/0.3.2/kibi-0.3.2-linux-x64.zip \
 && unzip kibi-0.3.2-linux-x64.zip \
-&& ln -s kibi-0.3.2-linux-x64 kibi
+&& ln -s kibi-0.3.2-linux-x64 kibi \
+&& chown -R kibi:kibi /opt
 
 COPY entrypoint.sh /opt/
 ENV PATH /opt/kibi/bin:$PATH
