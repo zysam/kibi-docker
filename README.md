@@ -1,6 +1,6 @@
 #Docker Container for Kibi
 
-First approach to create simple container starting instance of Kibi 0.3.2 
+First approach to create simple container starting instance of Kibi 4.4.2 
 (Highly influenced by the official image for Kibana.)
 
 ## Prerequisites
@@ -39,7 +39,7 @@ For example:
 
 ```
 elasticsearch:
-    image: "elasticsearch:2.2.0"
+    image: "elasticsearch:2.3.3"
     ports:
         - "9200:9200"
         - "9300:9300"
