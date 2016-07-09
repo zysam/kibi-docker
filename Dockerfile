@@ -29,9 +29,9 @@ RUN set -x \
     && tini -h
 
 RUN cd /opt \
-&& wget https://github.com/sirensolutions/kibi/releases/download/0.3.2/kibi-0.3.2-linux-x64.zip \
-&& unzip kibi-0.3.2-linux-x64.zip \
-&& ln -s kibi-0.3.2-linux-x64 kibi \
+&& wget https://github.com/sirensolutions/kibi/releases/download/tag-4.4.2/kibi-4.4.2-linux-x64.zip \
+&& unzip kibi-4.4.2-linux-x64.zip \
+&& ln -s kibi-4.4.2-linux-x64.zip kibi \
 && chown -R kibi:kibi /opt
 
 COPY entrypoint.sh /opt/
