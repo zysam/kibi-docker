@@ -1,7 +1,5 @@
 FROM sirensolutions/kibi-community-standalone:5.4.0-SNAPSHOT 
 
-RUN groupadd -r kibi && useradd -r -m -g kibi kibi
-
 RUN apt-get update \ 
 && apt-get clean \
 && apt-get install -y wget unzip ca-certificates --no-install-recommends
