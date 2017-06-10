@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM sirensolutions/kibi-community-standalone:5.4.0-SNAPSHOT 
 
 RUN groupadd -r kibi && useradd -r -m -g kibi kibi
 
@@ -27,12 +27,6 @@ RUN set -x \
     && rm -r "$GNUPGHOME" /usr/local/bin/tini.asc \
     && chmod +x /usr/local/bin/tini \
     && tini -h
-
-RUN cd /opt \
-&& wget https://github.com/sirensolutions/kibi/releases/download/tag-4.5.4/kibi-community-standalone-4.5.4-linux-x64.zip \
-&& unzip kibi-community-standalone-4.5.4-linux-x64.zip \
-&& ln -s kibi-community-standalone-4.5.4-linux-x64 kibi \
-&& chown -R kibi:kibi /opt
 
 COPY entrypoint.sh /opt/
 ENV PATH /opt/kibi/bin:$PATH

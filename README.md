@@ -1,6 +1,6 @@
 #Docker Container for Kibi
 
-First approach to create simple container starting instance of Kibi 4.4.2 
+First approach to create simple container starting instance of Kibi 4.5.4
 (Highly influenced by the official image for Kibana.)
 
 ## Prerequisites
