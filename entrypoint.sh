@@ -13,6 +13,7 @@ if [ "$1" = 'kibi' ]; then
         sed -ri "s!^(\#\s*)?(elasticsearch\.url:).*!\2 '$ELASTICSEARCH_URL'!" /opt/kibi/config/kibi.yml
         sed -ri "s!^(\#\s*)?(server\.host:).*!\2 '0\.0\.0\.0'!" /opt/kibi/config/kibi.yml
         sed -ri "s!^(\#\s*)?(server\.basePath:).*!\2 '$BASEPATH'!" /opt/kibi/config/kibi.yml
+        sed -ri "s!^(\#\s*)?(kibana\.index:).*!\2 '\.kibi'!" /opt/kibi/config/kibi.yml
     else
         echo >&2 'Missing link configuration or ELASTICSEARCH_URL'
         echo >&2 '  Did you forget to --link some-elasticsearch:elasticsearch'
