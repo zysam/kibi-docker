@@ -1,4 +1,4 @@
-FROM sirensolutions/kibi-community-standalone:5.4.0-SNAPSHOT 
+FROM sirensolutions/kibi-community-standalone:5.2.2-beta-1
 
 RUN apt-get update \ 
 && apt-get clean \
